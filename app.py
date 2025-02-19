@@ -7,13 +7,13 @@ weight = st.number_input("Enter your weight (kg):", min_value=1.0, step=0.1)
 height = st.number_input("Enter your height (cm):", min_value=50.0, step=0.1)
 
 if weight and height:
-    height_m = height / 100  # Convert cm to meters
+    height_m = height / 100 
     bmi = weight / (height_m ** 2)
     
-    # Display BMI
+    # BMI
     st.subheader(f"Your BMI: {bmi:.2f}")
 
-    # Show progress bar based on BMI range
+    # progress bar based on BMI range
     st.progress(min(int(bmi * 2), 100))  
 
     # Health Advice
